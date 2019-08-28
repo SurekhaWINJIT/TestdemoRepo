@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Login</name>
+   <name>ForLogin</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>85593ead-adfd-4509-90a5-37ff10bb2a88</testCaseGuid>
+   <testCaseGuid>7b60ff91-d77a-49d3-91c7-3947005acd07</testCaseGuid>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>c2a4c535-9ebe-41b5-b241-0cf0ac31aedb</id>
+      <id>0ff902e9-8ded-46f2-99ed-6a2b6f8c3a0c</id>
       <masked>false</masked>
       <name>Username1</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>0acb9bb7-039d-4c6a-a69b-07df8fa14d57</id>
+      <id>ea565e4d-ec7a-4296-9ce6-2c570975a569</id>
       <masked>false</masked>
       <name>Password1</name>
    </variable>

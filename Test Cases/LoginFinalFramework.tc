@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Login</name>
+   <name>LoginFinalFramework</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>85593ead-adfd-4509-90a5-37ff10bb2a88</testCaseGuid>
+   <testCaseGuid>450adcfe-dd51-4844-91f7-d817a177b9af</testCaseGuid>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>c2a4c535-9ebe-41b5-b241-0cf0ac31aedb</id>
+      <id>17c82f99-83f3-4eef-9c7c-8b06ef834088</id>
       <masked>false</masked>
-      <name>Username1</name>
+      <name>Usern</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>0acb9bb7-039d-4c6a-a69b-07df8fa14d57</id>
+      <id>94b73302-abd8-449e-8b3b-55e7557e64a8</id>
       <masked>false</masked>
-      <name>Password1</name>
+      <name>Pass</name>
    </variable>
 </TestCaseEntity>

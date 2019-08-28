@@ -12,22 +12,30 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.testdata.InternalData as InternalData
+import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 
-WebUI.openBrowser('https://www.ram.co.za/')
+InternalData data = findTestData(Login)
 
-WebUI.navigateToUrl('https://www.ram.co.za/')
+KeywordLogger log = new KeywordLogger()
 
-WebUI.click(findTestObject('Object Repository/Login/Page_RAM - Home Page/a_Login'))
+log.logInfo(Login)
 
-WebUI.setText(findTestObject('Login/Page_RAM - Home Page/input_Register_emailaddress', [(Username1) : Username1]), Username1)
+for (def index : (0..data.getRowNumbers() - 1)) {
+    WebUI.openBrowser('')
 
-WebUI.setText(findTestObject('Login/Page_RAM - Home Page/input_Register_password', [(Password1) : Password1]), Password1)
+    WebUI.navigateToUrl('https://www.ram.co.za/')
 
-WebUI.click(findTestObject('Object Repository/Login/Page_RAM - Home Page/button_SUBMIT'))
+    WebUI.setText(findTestObject('input_Register_emailaddress'), data.internallyGetValue('Username1', index))
 
-WebUI.waitForElementClickable(findTestObject('Login/Page_RAM - Home Page/Page_RAM - Home Page/a_Demo'), 10)
+    WebUI.setText(findTestObject('input_Register_password'), data.internallyGetValue('Password1', index))
 
-WebUI.click(findTestObject('Login/Page_RAM - Home Page/Page_RAM - Home Page/a_Demo'))
+    WebUI.click(findTestObject('button_SUBMIT'))
 
-WebUI.closeBrowser()
+    WebUI.verifyElementPresent(findTestObject('a_Demo'), 10)
+
+    WebUI.click(findTestObject('a_Demo'))
+
+    WebUI.closeBrowser()
+}
 

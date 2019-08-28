@@ -13,15 +13,17 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+import com.kms.katalon.core.configuration.RunConfiguration
+
 WebUI.openBrowser('https://www.ram.co.za/')
 
 WebUI.navigateToUrl('https://www.ram.co.za/')
 
 WebUI.click(findTestObject('Object Repository/Login/Page_RAM - Home Page/a_Login'))
 
-WebUI.setText(findTestObject('Login/Page_RAM - Home Page/input_Register_emailaddress', [(Username1) : Username1]), Username1)
+WebUI.setText(findTestObject('Login/Page_RAM - Home Page/input_Register_emailaddress', findTestData("Login").getValue(1,1)))
 
-WebUI.setText(findTestObject('Login/Page_RAM - Home Page/input_Register_password', [(Password1) : Password1]), Password1)
+WebUI.setText(findTestObject('Login/Page_RAM - Home Page/input_Register_password',findTestData("Login").getValue(2,1)))
 
 WebUI.click(findTestObject('Object Repository/Login/Page_RAM - Home Page/button_SUBMIT'))
 

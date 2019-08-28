@@ -27,11 +27,23 @@ WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/but
 
 WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/a_Services'))
 
+WebUI.waitForPageLoad(30)
+
 WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Local Services/a_Warehousing Services'))
+
+WebUI.waitForPageLoad(30)
 
 WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Warehousing Services/a_Solutions'))
 
+WebUI.waitForPageLoad(30)
+
 WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Pharmaceutical Hand-to-Hand Healthcare/a_Contact us'))
 
+WebUI.waitForPageLoad(30)
+
 WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Sales/a_Careers'))
+
+WebUI.waitForPageLoad(30)
+
+WebUI.closeBrowser()
 
