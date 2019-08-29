@@ -13,7 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://www.ram.co.za/')
+/*WebUI.openBrowser('https://www.ram.co.za/')
 
 WebUI.navigateToUrl('https://www.ram.co.za/')
 
@@ -23,7 +23,8 @@ WebUI.setText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/i
 
 WebUI.setEncryptedText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/input_Register_password'), '+hoWb3KevbByTdKvdSLKiw==')
 
-WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/button_SUBMIT'))
+WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/button_SUBMIT'))*/
+WebUI.callTestCase(findTestCase('Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/a_Services'))
 

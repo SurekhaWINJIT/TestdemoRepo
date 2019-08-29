@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>New Test Suite</name>
+   <name>Testsuit1</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -13,14 +13,14 @@
    <testCaseLink>
       <guid>418fab64-b781-4406-be05-795f40b24ecb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Click Menu</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c227259d-e071-4fca-92e5-12758f9cb971</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Login</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/LoginFinalFramework</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>1ef71b13-0867-4811-8077-8ca638af6f18</id>
@@ -31,16 +31,16 @@
          <testDataId>Data Files/Login</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>1ef71b13-0867-4811-8077-8ca638af6f18</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>Username1</value>
-         <variableId>c2a4c535-9ebe-41b5-b241-0cf0ac31aedb</variableId>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>17c82f99-83f3-4eef-9c7c-8b06ef834088</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>1ef71b13-0867-4811-8077-8ca638af6f18</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>Password1</value>
-         <variableId>0acb9bb7-039d-4c6a-a69b-07df8fa14d57</variableId>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>94b73302-abd8-449e-8b3b-55e7557e64a8</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

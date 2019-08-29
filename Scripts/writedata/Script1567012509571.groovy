@@ -12,30 +12,22 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.testdata.InternalData as InternalData
-import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 
-InternalData data = findTestData(Login)
+WebUI.openBrowser('')
 
-KeywordLogger log = new KeywordLogger()
+WebUI.navigateToUrl('https://www.ram.co.za/')
 
-log.logInfo(Login)
+WebUI.click(findTestObject('Login/Page_RAM - Home Page/a_Login'))
 
-for (def index : (0..data.getRowNumbers() - 1)) {
-    WebUI.openBrowser('')
+WebUI.setText(findTestObject('Login/Page_RAM - Home Page/input_Register_emailaddress'), 'demo123@gmail.com')
 
-    WebUI.navigateToUrl('https://www.ram.co.za/')
+WebUI.setEncryptedText(findTestObject('Login/Page_RAM - Home Page/input_Register_password'), '+hoWb3KevbByTdKvdSLKiw==')
 
-    WebUI.setText(findTestObject('input_Register_emailaddress'), data.internallyGetValue('Username1', index))
+String result1 = WebUI.getText(findTestObject('Login/Page_RAM - Home Page/button_SUBMIT'))
 
-    WebUI.setText(findTestObject('input_Register_password'), data.internallyGetValue('Password1', index))
+CustomKeywords.'myPack.WriteExcel.demoKey'(result1)
 
-    WebUI.click(findTestObject('button_SUBMIT'))
+WebUI.click(findTestObject('Login/Page_RAM - Home Page/button_SUBMIT'))
 
-    WebUI.verifyElementPresent(findTestObject('a_Demo'), 10)
-
-    WebUI.click(findTestObject('a_Demo'))
-
-    WebUI.closeBrowser()
-}
+WebUI.closeBrowser()
 

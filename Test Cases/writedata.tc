@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>LoginTC</name>
+   <name>writedata</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>040f89b6-4fcb-4509-9b75-680fd8402b4e</testCaseGuid>
+   <testCaseGuid>eafbc4d7-7352-4770-912d-fb8ff13e121f</testCaseGuid>
 </TestCaseEntity>
