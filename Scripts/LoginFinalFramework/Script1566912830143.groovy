@@ -20,19 +20,21 @@ for (def rowNum = 1; rowNum <= findTestData('Logintestdata').getRowNumbers(); ro
 
     WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/a_Login'))
 
-    //WebUI.setText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/input_Register_emailaddress'), Usern)
+    WebUI.waitForElementVisible(findTestObject('ClickMenu/Page_RAM - Home Page/input_Register_emailaddress'), 5)
+
     WebUI.setText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/input_Register_emailaddress'), findTestData(
             'Logintestdata').getValue(1, rowNum))
 
-    //WebUI.setText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/input_Register_password'), Pass)
     WebUI.setText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/input_Register_password'), findTestData(
             'Logintestdata').getValue(2, rowNum))
 
-    WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/button_SUBMIT'))
+    WebUI.click(findTestObject('ClickMenu/Page_RAM - Home Page/button_SUBMIT'))
 
     WebUI.waitForElementClickable(findTestObject('Login/Page_RAM - Home Page/Page_RAM - Home Page/a_Demo'), 10)
 
-    WebUI.click(findTestObject('Login/Page_RAM - Home Page/Page_RAM - Home Page/a_Demo'))
+    WebUI.verifyElementClickable(findTestObject('Login/Page_RAM - Hello Demo demo/a_Demo'), FailureHandling.CONTINUE_ON_FAILURE)
+
+    WebUI.click(findTestObject('Login/Page_RAM - Hello Demo demo/a_Demo'), FailureHandling.CONTINUE_ON_FAILURE)
 
     WebUI.closeBrowser()
 }

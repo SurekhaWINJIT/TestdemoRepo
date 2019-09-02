@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Login</name>
+   <name>Click Menu_Reuse testcase</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>4ce02868-bb99-42b3-8172-2d2c8737ab06</testCaseGuid>
+   <testCaseGuid>4d018b70-2088-4872-829c-bb77a0df4b72</testCaseGuid>
 </TestCaseEntity>

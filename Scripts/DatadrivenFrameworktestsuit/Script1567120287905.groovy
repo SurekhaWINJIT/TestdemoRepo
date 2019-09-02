@@ -13,13 +13,25 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://www.ram.co.za/')
+WebUI.openBrowser('')
 
-WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/a_Login'))
+WebUI.navigateToUrl('https://www.ram.co.za/')
 
-WebUI.setText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/input_Register_emailaddress'), 'demo123@gmail.com')
+WebUI.click(findTestObject('Login/Page_RAM - Home Page/a_Login'))
 
-WebUI.setText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/input_Register_password'), 'demo@123')
+WebUI.waitForElementVisible(findTestObject('ClickMenu/Page_RAM - Home Page/input_Register_emailaddress'), 10)
 
-WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/button_SUBMIT'))
+WebUI.setText(findTestObject('Login/Page_RAM - Home Page/input_Register_emailaddress'), Username)
+
+WebUI.setText(findTestObject('Login/Page_RAM - Home Page/input_Register_password'), Password)
+
+WebUI.click(findTestObject('Login/Page_RAM - Home Page/button_SUBMIT'))
+
+WebUI.waitForElementClickable(findTestObject('Login/Page_RAM - Home Page/Page_RAM - Home Page/a_Demo'), 10)
+
+WebUI.verifyElementClickable(findTestObject('Login/Page_RAM - Hello Demo demo/a_Demo'))
+
+WebUI.click(findTestObject('Login/Page_RAM - Home Page/Page_RAM - Home Page/a_Demo'))
+
+WebUI.closeBrowser()
 

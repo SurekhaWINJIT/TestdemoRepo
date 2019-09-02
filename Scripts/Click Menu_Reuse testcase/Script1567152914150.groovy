@@ -24,13 +24,15 @@ WebUI.setText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/i
 WebUI.setEncryptedText(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/input_Register_password'), '+hoWb3KevbByTdKvdSLKiw==')
 
 WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/button_SUBMIT'))*/
-WebUI.callTestCase(findTestCase('Login'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Login and screenshot'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Home Page/a_Services'))
 
 WebUI.waitForPageLoad(30)
 
 WebUI.click(findTestObject('Object Repository/ClickMenu/Page_RAM - Local Services/a_Warehousing Services'))
+
+
 
 WebUI.waitForPageLoad(30)
 
